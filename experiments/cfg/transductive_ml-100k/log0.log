@@ -1,0 +1,71 @@
+2019-07-31 23:16:25,633 - root - INFO - OrderedEasyDict([('SEED', 123), ('DATASET', OrderedEasyDict([('NAME', 'ml-100k'), ('VALID_RATIO', 0.1), ('TEST_RATIO', 0.2), ('IS_INDUCTIVE', False), ('INDUCTIVE_KEY', 'item'), ('INDUCTIVE_NODE_FRAC', 20), ('INDUCTIVE_EDGE_FRAC', 90)])), ('MODEL', OrderedEasyDict([('USE_EMBED', True), ('USE_FEA_PROJ', False), ('RECON_FEA', False), ('REMOVE_RATING', True), ('USE_DAE', True), ('NBLOCKS', 2), ('USE_RECURRENT', False), ('RECON_LAMBDA', 0.1), ('ACTIVATION', 'leaky')])), ('GRAPH_SAMPLER', OrderedEasyDict([('NUM_NEIGHBORS', -1)])), ('FEA', OrderedEasyDict([('MID_MAP', 0), ('UNITS', 0)])), ('EMBED', OrderedEasyDict([('UNITS', 32), ('MASK_PROP', 0.1), ('P_ZERO', 0.0)])), ('GCN', OrderedEasyDict([('TYPE', 'gcn'), ('DROPOUT', 0.5), ('USE_RECURRENT', False), ('AGG', OrderedEasyDict([('NORM_SYMM', True), ('UNITS', [250]), ('ACCUM', 'sum')])), ('OUT', OrderedEasyDict([('UNITS', [75])]))])), ('GEN_RATING', OrderedEasyDict([('MID_MAP', 64)])), ('TRAIN', OrderedEasyDict([('RATING_BATCH_SIZE', 10000), ('RECON_BATCH_SIZE', 1000000), ('MAX_ITER', 1000000), ('LOG_INTERVAL', 10), ('VALID_INTERVAL', 10), ('OPTIMIZER', 'adam'), ('LR', 0.002), ('WD', 0.0), ('DECAY_PATIENCE', 100), ('MIN_LR', 0.0005), ('LR_DECAY_FACTOR', 0.5), ('EARLY_STOPPING_PATIENCE', 150), ('GRAD_CLIP', 1.0)]))])
+2019-07-31 23:16:32,334 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): files.grouplens.org:80
+2019-07-31 23:16:32,540 - urllib3.connectionpool - DEBUG - http://files.grouplens.org:80 "GET /datasets/movielens/ml-100k.zip HTTP/1.1" 200 4924029
+2019-07-31 23:16:34,779 - root - INFO - Dataset Name=ml-100k
+  --------------------------
+user, num=943, feature dim=23
+movie, num=1682, feature dim=320
+meta-graph=
+         user   movie
+user        0  100000
+movie  100000       0
+multi-link=
+user --> movie: [1. 2. 3. 4. 5.]
+movie --> user: [1. 2. 3. 4. 5.]
+
+#Val/Test edges: 20000/20000
+------------------------------------------------------------------------------
+
+2019-07-31 23:16:34,793 - root - INFO - Feature dim: 
+user: (943, 23)
+movie: (1682, 320)
+2019-07-31 23:16:34,811 - root - INFO - All Graph=
+  --------------------------
+user, num=943, feature dim=23
+movie, num=1682, feature dim=320
+meta-graph=
+         user   movie
+user        0  100000
+movie  100000       0
+multi-link=
+user --> movie: [1. 2. 3. 4. 5.]
+movie --> user: [1. 2. 3. 4. 5.]
+
+Test Graph=
+  --------------------------
+user, num=943, feature dim=23
+movie, num=1682, feature dim=320
+meta-graph=
+        user  movie
+user       0  80000
+movie  80000      0
+multi-link=
+user --> movie: [1. 2. 3. 4. 5.]
+movie --> user: [1. 2. 3. 4. 5.]
+
+Val Graph=
+  --------------------------
+user, num=943, feature dim=23
+movie, num=1682, feature dim=320
+meta-graph=
+        user  movie
+user       0  72000
+movie  72000      0
+multi-link=
+user --> movie: [1. 2. 3. 4. 5.]
+movie --> user: [1. 2. 3. 4. 5.]
+
+Train Graph=
+  --------------------------
+user, num=943, feature dim=23
+movie, num=1682, feature dim=320
+meta-graph=
+        user  movie
+user       0  72000
+movie  72000      0
+multi-link=
+user --> movie: [1. 2. 3. 4. 5.]
+movie --> user: [1. 2. 3. 4. 5.]
+
+
+2019-07-31 23:16:34,895 - root - INFO - Removing training edges within the batch...

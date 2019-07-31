@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/ubuntu/STAR-GCN/GraphSampler/graph_sampler.cpp
+random
+-
+iostream
+-
+cstring
+-
+algorithm
+-
+ctime
+-
+graph_sampler.h
+/home/ubuntu/STAR-GCN/GraphSampler/graph_sampler.h
+
+/home/ubuntu/STAR-GCN/GraphSampler/graph_sampler.h
+vector
+-
+iostream
+-
+unordered_map
+-
+unordered_set
+-
+random
+-
+utility
+-
+omp.h
+-
+sparsehash/dense_hash_map
+/home/ubuntu/STAR-GCN/GraphSampler/sparsehash/dense_hash_map
+sparsehash/dense_hash_set
+/home/ubuntu/STAR-GCN/GraphSampler/sparsehash/dense_hash_set
+

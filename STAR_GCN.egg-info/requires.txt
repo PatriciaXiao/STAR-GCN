@@ -1,0 +1,12 @@
+numpy
+scipy
+matplotlib
+six
+pyyaml
+sklearn
+pandas
+logging
+warnings
+spacy
+mxnet
+gluonnlp

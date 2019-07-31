@@ -1,0 +1,1 @@
+/usr/bin/c++   -Wall -std=c++11 -O3 -ffast-math -fopenmp  -rdynamic CMakeFiles/graph_sampler_test.dir/graph_sampler.cpp.o  -o graph_sampler_test 
